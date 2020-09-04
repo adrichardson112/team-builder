@@ -39,7 +39,7 @@ function App() {
     <div className="App">
       <h1>Let's Meet The Team!</h1>
       <Form addNewMember={addNewMember} />
-      <Members teamList={setTeamList} />
+      <Members teamList={teamList} />
     </div>
   );
   }
