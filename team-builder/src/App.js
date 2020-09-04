@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
-import Members from './Members';
-import Form from './Form';
+import Members from './Components/Members';
+import Form from './Components/Form';
 
 import './App.css';
 
