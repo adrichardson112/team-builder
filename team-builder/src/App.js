@@ -9,29 +9,38 @@ function App() {
       id: 1,
       name: "Ashley",
       email: "adrichardson112@gmail.com",
-      role: "Front-End Specialist"
+      role: "Front-End Specialist",
+      hobbies: "Reading and Sports"
+    },
+    {
+      id: 2,
+      name: "Melanie",
+      email: "melanie-chele@lambdastudents.com",
+      role: "Full Stack Developer",
+      hobbies: "Video Games and Reading"
     }
   ]);
+
+  const addNewMember = (formData) => {
+    const newMember = {
+      id: Date.now(),
+      name: formData.name,
+      email: formData.email,
+      role: formData.role,
+      hobbies: formData.hobbies
+    };
+    setTeamList([...teamList, newMember]);
+  };
 
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Let's Meet The Team!</h1>
+      <Form addNewMember={addNewMember} />
+      <Members member={member} />
     </div>
   );
-}
+  }
+      
 
 export default App;
